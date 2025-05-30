@@ -12,7 +12,7 @@ export default class Card extends GameFramework.MonoBehaviour
     #isClicked;
     cardAnimation;
     static cardSignals = new Array("Club", "Heart", "Diamond", "Spade");
-    static #cardFilePath = "../../resource/card/";
+    static #cardFilePath = "../resource/card/";
     static cardMaxNumber = 13;
     static #cardImageExtension = "png";
 
@@ -69,7 +69,6 @@ export default class Card extends GameFramework.MonoBehaviour
     }
     setSource(signalIndex, cardNumber)
     {
-        console.log(`${Card.#cardFilePath}${Card.cardSignals[signalIndex]}${String(cardNumber + 1).padStart(2, '0')}.${Card.#cardImageExtension}`);
         this.gameObject.image.src = `${Card.#cardFilePath}${Card.cardSignals[signalIndex]}${String(cardNumber + 1).padStart(2, '0')}.${Card.#cardImageExtension}`;
     }
     onClick()
