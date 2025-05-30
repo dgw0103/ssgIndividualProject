@@ -12,7 +12,7 @@ export default class Card extends GameFramework.MonoBehaviour
     #isClicked;
     cardAnimation;
     static cardSignals = new Array("Club", "Heart", "Diamond", "Spade");
-    static #cardFilePath = "../resource/card/";
+    static #cardFilePath = "../ssgIndividualProject/resource/card/";
     static cardMaxNumber = 13;
     static #cardImageExtension = "png";
 
